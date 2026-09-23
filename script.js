@@ -14,10 +14,10 @@ document.querySelectorAll('.main-nav a').forEach(link => {
   });
 });
 
-const form = document.getElementById('quickForm');
+const quickForm = document.getElementById('quickForm');
 
-if (form) {
-  form.addEventListener('submit', function(e) {
+if (quickForm) {
+  quickForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const company = document.getElementById('company').value.trim();

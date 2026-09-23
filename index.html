@@ -1,281 +1,321 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>REVIT POINT | Gospodarka odpadami i rekultywacja</title>
-  <meta name="description" content="REVIT POINT – przetwarzanie odpadów, rekultywacja wyrobisk i współpraca z przedsiębiorstwami w zakresie zagospodarowania odpadów.">
-  <meta name="theme-color" content="#2f7d32">
+  <meta name="description" content="REVIT POINT – przetwarzanie odpadów, rekultywacja wyrobisk i współpraca z przedsiębiorstwami w zakresie zagospodarowania odpadów." />
+  <meta name="theme-color" content="#2f7d32" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a href="#top" class="brand">
-      <img src="logo.png" alt="REVIT POINT" class="brand-logo">
-      <div class="brand-copy">
-        <strong>REVIT POINT</strong>
-        <span>Gospodarka odpadami i rekultywacja</span>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <img src="logo.png" alt="REVIT POINT" class="brand-logo" />
+        <div class="brand-text">
+          <strong>REVIT POINT</strong>
+          <span>Gospodarka odpadami i rekultywacja</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#o-nas">O nas</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#odpady">Kody odpadów</a>
+        <a href="#smolniki">Smolniki II</a>
+        <a href="#kontakt" class="nav-cta">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image">
+        <img src="hero.png" alt="Zakład Górniczy Smolniki II" />
       </div>
-    </a>
+      <div class="hero-overlay"></div>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="hero-badge">REVIT POINT</span>
+          <h1>Gospodarka odpadami.<br />Rekultywacja wyrobisk.</h1>
+          <p>
+            Współpracujemy z przedsiębiorstwami w zakresie przetwarzania odpadów i działań rekultywacyjnych.
+            Warunki przyjęcia ustalamy indywidualnie na podstawie rodzaju odpadu, ilości oraz planowanej dostawy.
+          </p>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="#o-nas">O nas</a>
-      <a href="#oferta">Oferta</a>
-      <a href="#odpady">Kody odpadów</a>
-      <a href="#smolniki">Smolniki II</a>
-      <a href="#kontakt" class="nav-cta">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <section class="hero">
-    <div class="hero-media"><img src="hero.png" alt="Zakład Górniczy Smolniki II"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <span class="hero-kicker">REVIT POINT · SMOLNIKI II</span>
-        <h1>Gospodarka odpadami.<span>Rekultywacja wyrobisk.</span></h1>
-        <p class="hero-lead">
-          Współpracujemy z przedsiębiorstwami w zakresie przetwarzania odpadów i działań rekultywacyjnych.
-          Warunki przyjęcia ustalamy indywidualnie na podstawie rodzaju odpadu, ilości oraz planowanej dostawy.
-        </p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
-          <a href="#odpady" class="btn btn-outline">Zapytaj o kod odpadu</a>
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
+            <a href="#odpady" class="btn btn-secondary">Zapytaj o kod odpadu</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <aside class="hero-side">
-        <span class="hero-side-label">Kontakt bezpośredni</span>
-        <h3>Masz odpad do zagospodarowania?</h3>
-        <p>Podaj kod odpadu, ilość i miejsce pochodzenia. Zweryfikujemy możliwość przyjęcia.</p>
-        <a href="tel:+48604401277" class="hero-phone">+48 604 401 277</a>
-        <a href="mailto:biuro@revitpoint.pl" class="hero-email">biuro@revitpoint.pl</a>
-        <div class="hero-badges">
-          <span>BDO 000604352</span>
-          <span>NIP 7812040275</span>
+    <section class="info-strip">
+      <div class="container info-grid">
+        <div class="info-item">
+          <span>BDO</span>
+          <strong>000604352</strong>
         </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="facts">
-    <div class="container facts-grid">
-      <div class="fact"><span>BDO</span><strong>000604352</strong></div>
-      <div class="fact"><span>Obsługa</span><strong>Klienci biznesowi</strong></div>
-      <div class="fact"><span>Lokalizacja</span><strong>Smolniki II</strong></div>
-      <div class="fact"><span>Telefon</span><strong>+48 604 401 277</strong></div>
-    </div>
-  </section>
-
-  <section class="section" id="o-nas">
-    <div class="container about-grid">
-      <div>
-        <p class="section-label">O nas</p>
-        <h2>Partner w gospodarce odpadami i rekultywacji</h2>
+        <div class="info-item">
+          <span>Obsługa</span>
+          <strong>B2B</strong>
+        </div>
+        <div class="info-item">
+          <span>Lokalizacja</span>
+          <strong>Smolniki II</strong>
+        </div>
+        <div class="info-item">
+          <span>Kontakt</span>
+          <strong>+48 604 401 277</strong>
+        </div>
       </div>
-      <div class="about-copy">
-        <p class="lead">REVIT POINT działa w obszarze przetwarzania odpadów oraz rekultywacji terenów przekształconych.</p>
-        <p>Współpracujemy z przedsiębiorstwami poszukującymi sprawnego i uporządkowanego sposobu zagospodarowania odpadów.</p>
-        <p>Każde zapytanie analizujemy indywidualnie, a szczegóły dotyczące możliwości przyjęcia, terminu dostawy i warunków współpracy ustalamy bezpośrednio z klientem.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-muted" id="oferta">
-    <div class="container">
-      <div class="section-heading">
+    <section class="section" id="o-nas">
+      <div class="container about-grid">
         <div>
-          <p class="section-label">Oferta</p>
-          <h2>Jak możemy pomóc</h2>
+          <p class="section-label">O NAS</p>
+          <h2>Profesjonalna obsługa w gospodarce odpadami</h2>
         </div>
-        <p>Skupiamy się na prostym procesie współpracy, jasnych ustaleniach i sprawnej organizacji dostaw.</p>
+        <div class="about-copy">
+          <p class="lead">
+            REVIT POINT działa w obszarze przetwarzania odpadów i rekultywacji terenów przekształconych.
+          </p>
+          <p>
+            Współpracujemy z podmiotami poszukującymi sprawnego, legalnego i uporządkowanego sposobu
+            zagospodarowania odpadów.
+          </p>
+          <p>
+            Każde zapytanie analizujemy indywidualnie. Szczegóły dotyczące możliwości przyjęcia odpadu,
+            terminu dostawy oraz warunków współpracy ustalamy bezpośrednio po kontakcie.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-no">01</div>
-          <h3>Przetwarzanie odpadów</h3>
-          <p>Weryfikujemy możliwość przyjęcia konkretnego odpadu i ustalamy warunki współpracy na podstawie przekazanych informacji.</p>
-          <span class="service-foot">Indywidualna weryfikacja</span>
-        </article>
-
-        <article class="service-card">
-          <div class="service-no">02</div>
-          <h3>Rekultywacja wyrobisk</h3>
-          <p>Prowadzimy działania związane z rekultywacją wyrobiska w zakresie prowadzonej działalności i zgodnie z wymaganiami formalnymi.</p>
-          <span class="service-foot">Smolniki II</span>
-        </article>
-
-        <article class="service-card">
-          <div class="service-no">03</div>
-          <h3>Organizacja dostaw</h3>
-          <p>Ustalamy ilości, terminy, sposób przyjęcia oraz najważniejsze kwestie logistyczne związane z dostawami.</p>
-          <span class="service-foot">Kontakt B2B</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container process-wrap">
-      <div>
-        <p class="section-label">Jak wygląda współpraca</p>
-        <h2>Od zapytania do dostawy w trzech krokach</h2>
-      </div>
-
-      <div class="process-list">
-        <div class="process-row">
-          <span class="process-num">1</span>
+    <section class="section section-soft" id="oferta">
+      <div class="container">
+        <div class="section-head">
           <div>
-            <h3>Przekazujesz informacje</h3>
-            <p>Kod odpadu, orientacyjną ilość, miejsce pochodzenia i preferowany termin.</p>
+            <p class="section-label">OFERTA</p>
+            <h2>Jak możemy pomóc</h2>
           </div>
+          <p>
+            Skupiamy się na prostym procesie współpracy, jasnych ustaleniach i sprawnej organizacji dostaw.
+          </p>
         </div>
 
-        <div class="process-row">
-          <span class="process-num">2</span>
-          <div>
+        <div class="cards-grid">
+          <article class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Przetwarzanie odpadów</h3>
+            <p>
+              Weryfikujemy możliwość przyjęcia konkretnego odpadu i ustalamy warunki współpracy
+              na podstawie przekazanych informacji.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Rekultywacja wyrobisk</h3>
+            <p>
+              Prowadzimy działania związane z rekultywacją wyrobiska zgodnie z zakresem prowadzonej
+              działalności i wymaganiami formalnymi.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Obsługa przedsiębiorstw</h3>
+            <p>
+              Ustalamy terminy, ilości, sposób przyjęcia oraz kwestie logistyczne związane z dostawami
+              odpadów.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container process-wrap">
+        <div class="process-title">
+          <p class="section-label">JAK TO DZIAŁA</p>
+          <h2>Prosty proces. Bez zbędnych komplikacji.</h2>
+        </div>
+
+        <div class="process-list">
+          <div class="process-item">
+            <h3>Wyślij podstawowe informacje</h3>
+            <p>Kod odpadu, orientacyjna ilość, miejsce pochodzenia i preferowany termin.</p>
+          </div>
+
+          <div class="process-item">
             <h3>Weryfikujemy możliwość przyjęcia</h3>
-            <p>Analizujemy zapytanie i wracamy z informacją dotyczącą możliwości dalszej współpracy.</p>
+            <p>Analizujemy zapytanie i wracamy z informacją o możliwości dalszej współpracy.</p>
           </div>
-        </div>
 
-        <div class="process-row">
-          <span class="process-num">3</span>
-          <div>
+          <div class="process-item">
             <h3>Ustalamy warunki dostawy</h3>
-            <p>Potwierdzamy termin, sposób przyjęcia oraz najważniejsze kwestie organizacyjne.</p>
+            <p>Potwierdzamy termin, sposób przyjęcia i kwestie organizacyjne.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="odpady">
-    <div class="container waste-grid">
-      <div class="waste-main">
-        <p class="section-label">Kody odpadów</p>
-        <h2>Zapytaj o konkretny kod odpadu</h2>
-        <p>Zakres przyjmowanych odpadów zależy od konkretnego przypadku i wymaga wcześniejszej weryfikacji. Do sprawdzenia możliwości przyjęcia wystarczą podstawowe informacje.</p>
+    <section class="section" id="odpady">
+      <div class="container waste-grid">
+        <div class="waste-main">
+          <p class="section-label">KODY ODPADÓW</p>
+          <h2>Zapytaj o konkretny odpad</h2>
+          <p>
+            Zakres przyjmowanych odpadów zależy od konkretnego przypadku i wymaga weryfikacji.
+            Najszybciej sprawdzimy możliwość przyjęcia po otrzymaniu podstawowych danych.
+          </p>
 
-        <div class="waste-items">
-          <div><strong>01</strong><span>Kod odpadu</span></div>
-          <div><strong>02</strong><span>Orientacyjna ilość</span></div>
-          <div><strong>03</strong><span>Miejsce pochodzenia</span></div>
-          <div><strong>04</strong><span>Preferowany termin</span></div>
+          <div class="waste-tags">
+            <span>Kod odpadu</span>
+            <span>Ilość</span>
+            <span>Miejsce pochodzenia</span>
+            <span>Termin</span>
+          </div>
+        </div>
+
+        <aside class="waste-box">
+          <p class="mini-title">SZYBKA WERYFIKACJA</p>
+          <h3>Skontaktuj się z nami</h3>
+          <a href="tel:+48604401277" class="contact-line phone-line">+48 604 401 277</a>
+          <a href="mailto:biuro@revitpoint.pl" class="contact-line">biuro@revitpoint.pl</a>
+          <a href="#kontakt" class="btn btn-light">Przejdź do kontaktu</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-photo" id="smolniki">
+      <div class="container location-wrap">
+        <div class="location-card">
+          <p class="section-label section-label-light">LOKALIZACJA</p>
+          <h2>Zakład Górniczy Smolniki II</h2>
+          <p>
+            Miejsce prowadzenia działalności w województwie kujawsko-pomorskim, na terenie
+            wyrobiska objętego działaniami rekultywacyjnymi.
+          </p>
+
+          <div class="location-pills">
+            <span>Smolniki</span>
+            <span>gmina Szubin</span>
+            <span>kujawsko-pomorskie</span>
+          </div>
+
+          <p class="location-note">
+            Szczegóły dotyczące dojazdu i przyjęcia przekazujemy po kontakcie.
+          </p>
         </div>
       </div>
+    </section>
 
-      <aside class="waste-contact">
-        <span class="mini">Szybka weryfikacja</span>
-        <h3>Skontaktuj się z nami</h3>
-        <a href="tel:+48604401277">+48 604 401 277</a>
-        <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
-        <a href="#kontakt" class="btn">Przejdź do kontaktu</a>
-      </aside>
-    </div>
-  </section>
+    <section class="section section-soft" id="kontakt">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="section-label">KONTAKT</p>
+          <h2>Porozmawiajmy o Twoim odpadzie</h2>
+          <p class="lead">
+            Najszybciej skontaktujesz się z nami telefonicznie lub mailowo.
+            Możesz też skorzystać z prostego formularza.
+          </p>
 
-  <section class="location" id="smolniki">
-    <div class="location-media"><img src="hero.png" alt="Zakład Górniczy Smolniki II"></div>
-    <div class="location-overlay"></div>
-
-    <div class="container location-inner">
-      <div class="location-card">
-        <p class="section-label">Lokalizacja</p>
-        <h2>Zakład Górniczy Smolniki II</h2>
-        <p>Miejsce prowadzenia działalności w województwie kujawsko-pomorskim, na terenie wyrobiska objętego działaniami rekultywacyjnymi.</p>
-        <div class="location-tags">
-          <span>Smolniki</span>
-          <span>gmina Szubin</span>
-          <span>kujawsko-pomorskie</span>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <span>Telefon</span>
+              <a href="tel:+48604401277" class="phone-line">+48 604 401 277</a>
+            </div>
+            <div class="contact-card">
+              <span>E-mail</span>
+              <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+            </div>
+            <div class="contact-card">
+              <span>NIP</span>
+              <strong>7812040275</strong>
+            </div>
+            <div class="contact-card">
+              <span>BDO</span>
+              <strong>000604352</strong>
+            </div>
+          </div>
         </div>
-        <p class="location-note">Szczegóły dotyczące dojazdu, przyjęcia i warunków współpracy przekazujemy po kontakcie.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section section-muted" id="kontakt">
-    <div class="container contact-grid">
-      <div>
-        <p class="section-label">Kontakt</p>
-        <h2>Porozmawiajmy o możliwości współpracy</h2>
-        <p class="contact-lead">Najszybciej skontaktujesz się z nami telefonicznie lub mailowo. Możesz również przygotować wiadomość przez formularz.</p>
-
-        <div class="contact-data">
-          <div><span>Telefon</span><a href="tel:+48604401277">+48 604 401 277</a></div>
-          <div><span>E-mail</span><a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a></div>
-          <div><span>NIP</span><strong>7812040275</strong></div>
-          <div><span>BDO</span><strong>000604352</strong></div>
-        </div>
-      </div>
-
-      <div class="form-card">
-        <form id="quickForm">
-          <div class="form-grid">
-            <div class="form-row full">
+        <div class="form-card">
+          <form id="quickForm">
+            <div class="form-row">
               <label for="company">Firma</label>
-              <input type="text" id="company" placeholder="Nazwa firmy">
+              <input id="company" type="text" placeholder="Nazwa firmy" />
             </div>
-            <div class="form-row full">
+
+            <div class="form-row">
               <label for="name">Imię i nazwisko</label>
-              <input type="text" id="name" placeholder="Twoje imię i nazwisko">
+              <input id="name" type="text" placeholder="Twoje imię i nazwisko" />
             </div>
+
+            <div class="form-row split-row">
+              <div>
+                <label for="phone">Telefon</label>
+                <input id="phone" type="text" placeholder="+48 ..." />
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="adres e-mail" />
+              </div>
+            </div>
+
+            <div class="form-row split-row">
+              <div>
+                <label for="waste">Kod odpadu</label>
+                <input id="waste" type="text" placeholder="np. 17 05 04" />
+              </div>
+              <div>
+                <label for="amount">Ilość</label>
+                <input id="amount" type="text" placeholder="np. 20 Mg" />
+              </div>
+            </div>
+
             <div class="form-row">
-              <label for="phone">Telefon</label>
-              <input type="text" id="phone" placeholder="+48 ...">
-            </div>
-            <div class="form-row">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="adres e-mail">
-            </div>
-            <div class="form-row">
-              <label for="waste">Kod odpadu</label>
-              <input type="text" id="waste" placeholder="np. 17 05 04">
-            </div>
-            <div class="form-row">
-              <label for="amount">Ilość</label>
-              <input type="text" id="amount" placeholder="np. 20 Mg">
-            </div>
-            <div class="form-row full">
               <label for="message">Wiadomość</label>
               <textarea id="message" rows="5" placeholder="Opisz krótko rodzaj odpadu, miejsce pochodzenia i termin..."></textarea>
             </div>
-          </div>
-          <button type="submit" class="btn btn-primary form-submit">Przygotuj wiadomość e-mail</button>
-          <p class="form-note">Formularz otwiera gotową wiadomość w Twoim programie pocztowym.</p>
-        </form>
+
+            <button type="submit" class="btn btn-primary form-button">Przygotuj wiadomość e-mail</button>
+            <p class="form-note">Po kliknięciu otworzy się gotowa wiadomość w Twoim programie pocztowym.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="REVIT POINT" class="footer-logo" />
+        <div>
+          <strong>REVIT POINT</strong>
+          <span>Gospodarka odpadami i rekultywacja</span>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <span>NIP 7812040275</span>
+        <span>BDO 000604352</span>
+        <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img src="logo.png" alt="" class="footer-logo">
-      <div>
-        <strong>REVIT POINT</strong>
-        <span>Gospodarka odpadami i rekultywacja</span>
-      </div>
-    </div>
-    <div class="footer-meta">
-      <span>NIP 7812040275</span>
-      <span>BDO 000604352</span>
-      <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

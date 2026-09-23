@@ -1,16 +1,13 @@
-REVIT POINT — świeży komplet plików
+REVIT POINT — wersja oparta na stylu z Twojego screenshota
 
-Wgraj ponownie wszystkie pliki:
-- index.html
-- styles.css
-- script.js
-- logo.png
-- hero.png
+Ta wersja jest zrobiona według układu, który wskazałaś jako ładny:
+- biały nagłówek,
+- duże hero z ciemną nakładką,
+- duży nagłówek po lewej,
+- zielone przyciski,
+- jasne sekcje niżej,
+- bez 01 / 02 / 03 w kartach oferty,
+- numer telefonu wszędzie w jednej linii.
 
-Najważniejsza poprawka:
-numer +48 604 401 277 w karcie kontaktowej jest wymuszony w jednej linii.
-
-Po zatwierdzeniu zmian na GitHubie:
-1. poczekaj na zielony ptaszek w Actions,
-2. otwórz stronę,
-3. zrób Ctrl + F5.
+Wgraj do GitHuba wszystkie pliki z paczki i zastąp obecne.
+Po wdrożeniu zrób Ctrl + F5.
