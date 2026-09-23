@@ -1,13 +1,11 @@
-REVIT POINT — wersja oparta na stylu z Twojego screenshota
+REVIT POINT — poprawiona wersja hero
 
-Ta wersja jest zrobiona według układu, który wskazałaś jako ładny:
-- biały nagłówek,
-- duże hero z ciemną nakładką,
-- duży nagłówek po lewej,
-- zielone przyciski,
-- jasne sekcje niżej,
-- bez 01 / 02 / 03 w kartach oferty,
-- numer telefonu wszędzie w jednej linii.
+Zmiany:
+- tekst w hero jest mniejszy,
+- blok tekstu jest węższy,
+- całość jest ustawiona w tej samej osi co logo i menu,
+- nagłówek nie rozciąga się już prawie przez pół ekranu,
+- wysokość hero jest trochę mniejsza.
 
-Wgraj do GitHuba wszystkie pliki z paczki i zastąp obecne.
+Wgraj ponownie wszystkie pliki lub co najmniej styles.css.
 Po wdrożeniu zrób Ctrl + F5.

@@ -91,7 +91,7 @@ a{text-decoration:none;color:inherit}
 /* HERO */
 .hero{
   position:relative;
-  min-height:720px;
+  min-height:660px;
   display:flex;
   align-items:center;
   overflow:hidden;
@@ -114,10 +114,9 @@ a{text-decoration:none;color:inherit}
 .hero-inner{
   position:relative;
   z-index:2;
-  width:100%;
 }
 .hero-copy{
-  max-width:760px;
+  max-width:650px;
   color:#fff;
   padding:4rem 0 3rem;
 }
@@ -137,14 +136,14 @@ a{text-decoration:none;color:inherit}
 }
 .hero h1{
   margin:0;
-  font-size:clamp(3rem, 6vw, 5.3rem);
-  line-height:.98;
-  letter-spacing:-.05em;
+  font-size:clamp(2.6rem, 4.8vw, 4.35rem);
+  line-height:1.02;
+  letter-spacing:-.045em;
 }
 .hero p{
   margin:1.6rem 0 0;
-  max-width:720px;
-  font-size:1.1rem;
+  max-width:610px;
+  font-size:1.02rem;
   color:rgba(255,255,255,.93);
 }
 .hero-actions{
@@ -627,7 +626,7 @@ a{text-decoration:none;color:inherit}
 
 @media (max-width: 420px){
   .hero h1{
-    font-size:2.8rem;
+    font-size:2.45rem;
   }
   .contact-line{
     font-size:1rem;
