@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REVIT POINT | Gospodarka odpadami i rekultywacja</title>
+  <meta name="description" content="REVIT POINT – przetwarzanie odpadów, rekultywacja wyrobisk i współpraca z przedsiębiorstwami w zakresie zagospodarowania odpadów." />
+  <meta name="theme-color" content="#2f7d32" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#2f7d32;
+      --green-dark:#245f28;
+      --green-soft:#edf4ec;
+      --ink:#182018;
+      --muted:#657066;
+      --bg:#f6f4ee;
+      --white:#ffffff;
+      --line:#ded9cd;
+      --shadow:0 18px 45px rgba(22,35,24,.08);
+      --radius:22px;
+      --container:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit}
+    .container{width:min(var(--container),calc(100% - 2rem));margin-inline:auto}
+
+    /* HEADER */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand{display:flex;align-items:center;gap:.9rem}
+    .brand-logo{width:48px;height:48px;object-fit:contain}
+    .brand-copy{display:flex;flex-direction:column}
+    .brand-copy strong{font-size:1rem;letter-spacing:.03em}
+    .brand-copy span{font-size:.78rem;color:var(--muted)}
+    .main-nav{display:flex;align-items:center;gap:1.35rem}
+    .main-nav a{font-size:.94rem;font-weight:600}
+    .nav-cta{
+      padding:.72rem 1.05rem;
+      color:#fff!important;
+      background:var(--green);
+      border-radius:999px;
+    }
+    .menu-toggle{
+      display:none;
+      border:0;
+      background:transparent;
+      font-size:1.55rem;
+      cursor:pointer;
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:690px;
+      height:calc(100vh - 78px);
+      max-height:830px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+    }
+    .hero-media,.hero-overlay{position:absolute;inset:0}
+    .hero-media img{width:100%;height:100%;object-fit:cover}
+    .hero-overlay{
+      background:
+        linear-gradient(90deg,rgba(12,21,14,.80) 0%,rgba(12,21,14,.58) 42%,rgba(12,21,14,.12) 75%),
+        linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.18));
+    }
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      color:#fff;
+      display:grid;
+      grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);
+      gap:4rem;
+      align-items:end;
+      width:100%;
+    }
+    .hero-copy{max-width:760px}
+    .hero-kicker{
+      display:inline-flex;
+      padding:.44rem .8rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.10);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+    .hero h1{
+      font-size:clamp(2.7rem,5.2vw,5rem);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      margin:0;
+      max-width:780px;
+    }
+    .hero h1 span{display:block;color:#e7eddc}
+    .hero-lead{
+      max-width:680px;
+      margin:1.25rem 0 0;
+      font-size:1.08rem;
+      color:rgba(255,255,255,.91);
+    }
+    .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:.88rem 1.25rem;
+      border-radius:999px;
+      font-weight:800;
+      border:0;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--green);color:#fff}
+    .btn-primary:hover{background:var(--green-dark)}
+    .btn-outline{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.35);
+      background:rgba(255,255,255,.06);
+    }
+
+    .hero-side{
+      justify-self:end;
+      width:min(340px,100%);
+      background:rgba(255,255,255,.93);
+      color:var(--ink);
+      border-radius:20px;
+      padding:1.35rem;
+      box-shadow:0 20px 55px rgba(0,0,0,.16);
+    }
+    .hero-side-label{
+      display:block;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      font-size:.72rem;
+      color:var(--green);
+      font-weight:800;
+      margin-bottom:.6rem;
+    }
+    .hero-side h3{margin:.1rem 0 .7rem;font-size:1.25rem}
+    .hero-side p{margin:0;color:var(--muted);font-size:.92rem}
+    .hero-side a{
+      display:block;
+      margin-top:.6rem;
+      font-weight:800;
+      color:var(--green-dark);
+    }
+    .hero-phone{
+      white-space:nowrap;
+      font-size:1.05rem;
+      line-height:1.2;
+      display:inline-block!important;
+    }
+
+    /* TRUST / FACTS */
+    .facts{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+    }
+    .facts-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+    .fact{
+      padding:1.1rem 1.15rem;
+      border-right:1px solid var(--line);
+    }
+    .fact:last-child{border-right:0}
+    .fact span{
+      display:block;
+      color:var(--muted);
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:.15rem;
+    }
+    .fact strong{font-size:.98rem}
+
+    /* GENERAL */
+    .section{padding:5.8rem 0}
+    .section-light{background:#fff}
+    .section-muted{background:#efede6}
+    .section-label{
+      margin:0 0 .8rem;
+      color:var(--green);
+      font-size:.8rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .section h2{
+      margin:0;
+      font-size:clamp(2rem,3.7vw,3.45rem);
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+
+    /* ABOUT */
+    .about-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:5rem;
+      align-items:start;
+    }
+    .about-copy{max-width:660px}
+    .about-copy .lead{font-size:1.18rem;font-weight:650;margin-top:0}
+    .about-copy p{margin:0 0 1rem}
+
+    /* SERVICES */
+    .section-heading{
+      display:flex;
+      justify-content:space-between;
+      gap:2rem;
+      align-items:end;
+      margin-bottom:2rem;
+    }
+    .section-heading>p{
+      max-width:480px;
+      margin:0;
+      color:var(--muted);
+    }
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+    }
+    .service-card{
+      min-height:300px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1.55rem;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+    }
+    .service-no{
+      width:48px;height:48px;
+      display:grid;place-items:center;
+      border-radius:14px;
+      background:var(--green-soft);
+      color:var(--green);
+      font-weight:800;
+      margin-bottom:2.5rem;
+    }
+    .service-card h3{font-size:1.2rem;margin:0 0 .55rem}
+    .service-card p{margin:0;color:#424b43}
+    .service-card .service-foot{
+      margin-top:auto;
+      padding-top:1.2rem;
+      color:var(--green);
+      font-size:.86rem;
+      font-weight:700;
+    }
+
+    /* PROCESS */
+    .process-wrap{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:5rem;
+      align-items:start;
+    }
+    .process-list{border-top:1px solid var(--line)}
+    .process-row{
+      display:grid;
+      grid-template-columns:62px 1fr;
+      gap:1rem;
+      padding:1.7rem 0;
+      border-bottom:1px solid var(--line);
+    }
+    .process-num{
+      width:38px;height:38px;
+      display:grid;place-items:center;
+      background:var(--green);
+      color:#fff;
+      border-radius:50%;
+      font-weight:800;
+      font-size:.85rem;
+    }
+    .process-row h3{margin:0 0 .3rem;font-size:1.12rem}
+    .process-row p{margin:0;color:var(--muted)}
+
+    /* WASTE */
+    .waste-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:1rem;
+      align-items:stretch;
+    }
+    .waste-main{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:2rem;
+    }
+    .waste-main p{max-width:700px}
+    .waste-items{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.75rem;
+      margin-top:1.5rem;
+    }
+    .waste-items div{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      padding:.9rem 1rem;
+      background:var(--bg);
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+    .waste-items strong{color:var(--green)}
+    .waste-contact{
+      border-radius:var(--radius);
+      padding:2rem;
+      background:linear-gradient(145deg,#213d26,#2f7d32);
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      box-shadow:var(--shadow);
+    }
+    .waste-contact .mini{
+      font-size:.74rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      color:rgba(255,255,255,.72);
+      font-weight:800;
+      margin-bottom:.4rem;
+    }
+    .waste-contact h3{font-size:1.55rem;margin:.15rem 0 .8rem}
+    .waste-contact a:not(.btn){font-weight:800;margin:.3rem 0}
+    .waste-contact .btn{
+      margin-top:1.2rem;
+      width:max-content;
+      background:#fff;
+      color:var(--green-dark);
+    }
+
+    /* LOCATION */
+    .location{
+      position:relative;
+      min-height:620px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+    }
+    .location-media,.location-overlay{position:absolute;inset:0}
+    .location-media img{width:100%;height:100%;object-fit:cover}
+    .location-overlay{
+      background:linear-gradient(90deg,rgba(14,24,15,.68),rgba(14,24,15,.12));
+    }
+    .location-inner{position:relative;z-index:2}
+    .location-card{
+      width:min(560px,100%);
+      padding:2rem;
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.92);
+      box-shadow:var(--shadow);
+    }
+    .location-card h2{font-size:clamp(2rem,3.7vw,3.3rem)}
+    .location-card p{color:#3e473f}
+    .location-tags{
+      display:flex;
+      gap:.55rem;
+      flex-wrap:wrap;
+      margin:1rem 0;
+    }
+    .location-tags span{
+      padding:.5rem .8rem;
+      background:var(--green-soft);
+      color:var(--green-dark);
+      border-radius:999px;
+      font-weight:650;
+      font-size:.86rem;
+    }
+    .location-note{font-size:.9rem;color:var(--muted)!important}
+
+    /* CONTACT */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:2rem;
+      align-items:start;
+    }
+    .contact-lead{max-width:500px;color:#424b43}
+    .contact-data{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:.75rem;
+      margin-top:1.6rem;
+    }
+    .contact-data div{
+      padding:1rem 1.05rem;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+    .contact-data span{
+      display:block;
+      color:var(--muted);
+      font-size:.78rem;
+      margin-bottom:.2rem;
+    }
+    .contact-data a,.contact-data strong{font-size:1rem}
+
+    .form-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1.45rem;
+      box-shadow:var(--shadow);
+    }
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+    }
+    .form-row.full{grid-column:1/-1}
+    .form-row label{
+      display:block;
+      font-size:.86rem;
+      font-weight:700;
+      margin-bottom:.4rem;
+    }
+    .form-row input,.form-row textarea{
+      width:100%;
+      padding:.92rem 1rem;
+      border:1px solid #d8d2c6;
+      border-radius:14px;
+      background:#fcfbf8;
+      color:var(--ink);
+    }
+    .form-row input:focus,.form-row textarea:focus{
+      outline:2px solid rgba(47,125,50,.15);
+      border-color:var(--green);
+    }
+    .form-submit{width:100%;margin-top:1rem}
+    .form-note{font-size:.8rem;color:var(--muted);margin:.7rem 0 0}
+
+    /* FOOTER */
+    .footer{
+      background:#152018;
+      color:#dce5dd;
+      padding:1.5rem 0;
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:center;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+    }
+    .footer-logo{
+      width:38px;height:38px;object-fit:contain;
+      background:#fff;border-radius:8px;
+    }
+    .footer-brand div{display:flex;flex-direction:column}
+    .footer-brand span{font-size:.78rem;color:#aeb8af}
+    .footer-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      color:#bac4bb;
+      font-size:.84rem;
+    }
+
+    @media(max-width:980px){
+      .hero-inner,.about-grid,.process-wrap,.waste-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-side{justify-self:start}
+      .section-heading{align-items:start;flex-direction:column}
+    }
+    @media(max-width:820px){
+      .service-grid,.facts-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:760px){
+      .menu-toggle{display:block}
+      .main-nav{
+        position:absolute;
+        top:78px;left:0;right:0;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        background:#fff;
+        padding:1rem;
+        border-bottom:1px solid var(--line);
+      }
+      .main-nav.open{display:flex}
+      .brand-copy span{display:none}
+      .hero{
+        height:auto;
+        min-height:700px;
+        align-items:end;
+      }
+      .hero-inner{padding:6.5rem 0 3.5rem}
+      .hero-side{width:100%}
+      .hero-overlay{background:linear-gradient(180deg,rgba(12,21,14,.15),rgba(12,21,14,.82))}
+      .service-grid,.facts-grid,.waste-items,.contact-data,.form-grid{grid-template-columns:1fr}
+      .form-row.full{grid-column:auto}
+      .section{padding:4.5rem 0}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <img src="logo.png" alt="REVIT POINT" class="brand-logo">
+      <div class="brand-copy">
+        <strong>REVIT POINT</strong>
+        <span>Gospodarka odpadami i rekultywacja</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#o-nas">O nas</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#odpady">Kody odpadów</a>
+      <a href="#smolniki">Smolniki II</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-media"><img src="hero.png" alt="Zakład Górniczy Smolniki II"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-kicker">REVIT POINT · SMOLNIKI II</span>
+        <h1>Gospodarka odpadami.<span>Rekultywacja wyrobisk.</span></h1>
+        <p class="hero-lead">
+          Współpracujemy z przedsiębiorstwami w zakresie przetwarzania odpadów i działań rekultywacyjnych.
+          Warunki przyjęcia ustalamy indywidualnie na podstawie rodzaju odpadu, ilości oraz planowanej dostawy.
+        </p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Skontaktuj się</a>
+          <a href="#odpady" class="btn btn-outline">Zapytaj o kod odpadu</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <span class="hero-side-label">Szybki kontakt</span>
+        <h3>Masz odpad do zagospodarowania?</h3>
+        <p>Podaj kod odpadu, ilość i miejsce pochodzenia. Zweryfikujemy możliwość przyjęcia.</p>
+        <a href="tel:+48604401277" class="hero-phone">+48 604 401 277</a>
+        <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="container facts-grid">
+      <div class="fact"><span>BDO</span><strong>000604352</strong></div>
+      <div class="fact"><span>Obsługa</span><strong>Klienci biznesowi</strong></div>
+      <div class="fact"><span>Lokalizacja</span><strong>Smolniki II</strong></div>
+      <div class="fact"><span>Telefon</span><strong>+48 604 401 277</strong></div>
+    </div>
+  </section>
+
+  <section class="section" id="o-nas">
+    <div class="container about-grid">
+      <div>
+        <p class="section-label">O nas</p>
+        <h2>Partner w gospodarce odpadami i rekultywacji</h2>
+      </div>
+      <div class="about-copy">
+        <p class="lead">REVIT POINT działa w obszarze przetwarzania odpadów oraz rekultywacji terenów przekształconych.</p>
+        <p>Współpracujemy z przedsiębiorstwami poszukującymi sprawnego i uporządkowanego sposobu zagospodarowania odpadów.</p>
+        <p>Każde zapytanie analizujemy indywidualnie, a szczegóły dotyczące możliwości przyjęcia, terminu dostawy i warunków współpracy ustalamy bezpośrednio z klientem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted" id="oferta">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Oferta</p>
+          <h2>Jak możemy pomóc</h2>
+        </div>
+        <p>Skupiamy się na prostym procesie współpracy, jasnych ustaleniach i sprawnej organizacji dostaw.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-no">01</div>
+          <h3>Przetwarzanie odpadów</h3>
+          <p>Weryfikujemy możliwość przyjęcia konkretnego odpadu i ustalamy warunki współpracy na podstawie przekazanych informacji.</p>
+          <span class="service-foot">Indywidualna weryfikacja</span>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">02</div>
+          <h3>Rekultywacja wyrobisk</h3>
+          <p>Prowadzimy działania związane z rekultywacją wyrobiska w zakresie prowadzonej działalności i zgodnie z wymaganiami formalnymi.</p>
+          <span class="service-foot">Smolniki II</span>
+        </article>
+
+        <article class="service-card">
+          <div class="service-no">03</div>
+          <h3>Organizacja dostaw</h3>
+          <p>Ustalamy ilości, terminy, sposób przyjęcia oraz najważniejsze kwestie logistyczne związane z dostawami.</p>
+          <span class="service-foot">Kontakt B2B</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container process-wrap">
+      <div>
+        <p class="section-label">Jak wygląda współpraca</p>
+        <h2>Od zapytania do dostawy w trzech krokach</h2>
+      </div>
+
+      <div class="process-list">
+        <div class="process-row">
+          <span class="process-num">1</span>
+          <div>
+            <h3>Przekazujesz informacje</h3>
+            <p>Kod odpadu, orientacyjną ilość, miejsce pochodzenia i preferowany termin.</p>
+          </div>
+        </div>
+
+        <div class="process-row">
+          <span class="process-num">2</span>
+          <div>
+            <h3>Weryfikujemy możliwość przyjęcia</h3>
+            <p>Analizujemy zapytanie i wracamy z informacją dotyczącą możliwości dalszej współpracy.</p>
+          </div>
+        </div>
+
+        <div class="process-row">
+          <span class="process-num">3</span>
+          <div>
+            <h3>Ustalamy warunki dostawy</h3>
+            <p>Potwierdzamy termin, sposób przyjęcia oraz najważniejsze kwestie organizacyjne.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="odpady">
+    <div class="container waste-grid">
+      <div class="waste-main">
+        <p class="section-label">Kody odpadów</p>
+        <h2>Zapytaj o konkretny kod odpadu</h2>
+        <p>Zakres przyjmowanych odpadów zależy od konkretnego przypadku i wymaga wcześniejszej weryfikacji. Do sprawdzenia możliwości przyjęcia wystarczą podstawowe informacje.</p>
+
+        <div class="waste-items">
+          <div><strong>01</strong><span>Kod odpadu</span></div>
+          <div><strong>02</strong><span>Orientacyjna ilość</span></div>
+          <div><strong>03</strong><span>Miejsce pochodzenia</span></div>
+          <div><strong>04</strong><span>Preferowany termin</span></div>
+        </div>
+      </div>
+
+      <aside class="waste-contact">
+        <span class="mini">Szybka weryfikacja</span>
+        <h3>Skontaktuj się z nami</h3>
+        <a href="tel:+48604401277">+48 604 401 277</a>
+        <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+        <a href="#kontakt" class="btn">Przejdź do kontaktu</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="location" id="smolniki">
+    <div class="location-media"><img src="hero.png" alt="Zakład Górniczy Smolniki II"></div>
+    <div class="location-overlay"></div>
+
+    <div class="container location-inner">
+      <div class="location-card">
+        <p class="section-label">Lokalizacja</p>
+        <h2>Zakład Górniczy Smolniki II</h2>
+        <p>Miejsce prowadzenia działalności w województwie kujawsko-pomorskim, na terenie wyrobiska objętego działaniami rekultywacyjnymi.</p>
+        <div class="location-tags">
+          <span>Smolniki</span>
+          <span>gmina Szubin</span>
+          <span>kujawsko-pomorskie</span>
+        </div>
+        <p class="location-note">Szczegóły dotyczące dojazdu, przyjęcia i warunków współpracy przekazujemy po kontakcie.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted" id="kontakt">
+    <div class="container contact-grid">
+      <div>
+        <p class="section-label">Kontakt</p>
+        <h2>Porozmawiajmy o możliwości współpracy</h2>
+        <p class="contact-lead">Najszybciej skontaktujesz się z nami telefonicznie lub mailowo. Możesz również przygotować wiadomość przez formularz.</p>
+
+        <div class="contact-data">
+          <div><span>Telefon</span><a href="tel:+48604401277">+48 604 401 277</a></div>
+          <div><span>E-mail</span><a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a></div>
+          <div><span>NIP</span><strong>7812040275</strong></div>
+          <div><span>BDO</span><strong>000604352</strong></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="quickForm">
+          <div class="form-grid">
+            <div class="form-row full">
+              <label for="company">Firma</label>
+              <input type="text" id="company" placeholder="Nazwa firmy">
+            </div>
+            <div class="form-row full">
+              <label for="name">Imię i nazwisko</label>
+              <input type="text" id="name" placeholder="Twoje imię i nazwisko">
+            </div>
+            <div class="form-row">
+              <label for="phone">Telefon</label>
+              <input type="text" id="phone" placeholder="+48 ...">
+            </div>
+            <div class="form-row">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="adres e-mail">
+            </div>
+            <div class="form-row">
+              <label for="waste">Kod odpadu</label>
+              <input type="text" id="waste" placeholder="np. 17 05 04">
+            </div>
+            <div class="form-row">
+              <label for="amount">Ilość</label>
+              <input type="text" id="amount" placeholder="np. 20 Mg">
+            </div>
+            <div class="form-row full">
+              <label for="message">Wiadomość</label>
+              <textarea id="message" rows="5" placeholder="Opisz krótko rodzaj odpadu, miejsce pochodzenia i termin..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Przygotuj wiadomość e-mail</button>
+          <p class="form-note">Formularz otwiera gotową wiadomość w Twoim programie pocztowym.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="" class="footer-logo">
+      <div>
+        <strong>REVIT POINT</strong>
+        <span>Gospodarka odpadami i rekultywacja</span>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>NIP 7812040275</span>
+      <span>BDO 000604352</span>
+      <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+  }
+
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => mainNav.classList.remove('open'));
+  });
+
+  const form = document.getElementById('quickForm');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const company = document.getElementById('company').value.trim();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const waste = document.getElementById('waste').value.trim();
+      const amount = document.getElementById('amount').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Zapytanie – REVIT POINT');
+      const body = encodeURIComponent(
+`Dzień dobry,
+
+przesyłam zapytanie dotyczące możliwości współpracy.
+
+Firma: ${company}
+Imię i nazwisko: ${name}
+Telefon: ${phone}
+E-mail: ${email}
+Kod odpadu: ${waste}
+Ilość: ${amount}
+
+Wiadomość:
+${message}
+
+Pozdrawiam`
+      );
+
+      window.location.href = `mailto:biuro@revitpoint.pl?subject=${subject}&body=${body}`;
+    });
+  }
+</script>
+</body>
+</html>
