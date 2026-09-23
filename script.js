@@ -3,23 +3,16 @@ const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
 if (menuToggle && mainNav) {
-  menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-  });
+  menuToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
 }
-
 document.querySelectorAll('.main-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-  });
+  link.addEventListener('click', () => mainNav.classList.remove('open'));
 });
 
 const quickForm = document.getElementById('quickForm');
-
 if (quickForm) {
-  quickForm.addEventListener('submit', function (e) {
+  quickForm.addEventListener('submit', function(e) {
     e.preventDefault();
-
     const company = document.getElementById('company').value.trim();
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
@@ -29,8 +22,7 @@ if (quickForm) {
     const message = document.getElementById('message').value.trim();
 
     const subject = encodeURIComponent('Zapytanie – REVIT POINT');
-    const body = encodeURIComponent(
-`Dzień dobry,
+    const body = encodeURIComponent(`Dzień dobry,
 
 przesyłam zapytanie dotyczące możliwości współpracy.
 
@@ -44,8 +36,7 @@ Ilość: ${amount}
 Wiadomość:
 ${message}
 
-Pozdrawiam`
-    );
+Pozdrawiam`);
 
     window.location.href = `mailto:biuro@revitpoint.pl?subject=${subject}&body=${body}`;
   });
