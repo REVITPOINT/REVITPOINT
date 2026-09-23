@@ -1,29 +1,19 @@
-# REVIT POINT – strona internetowa
+REVIT POINT — wersja 2
 
-To gotowa, darmowa strona typu one-page pod GitHub Pages.
+Najważniejsze zmiany:
+- mniejszy, bardziej elegancki nagłówek na zdjęciu,
+- lepsze proporcje sekcji i mniej pustej przestrzeni,
+- pasek z BDO / B2B / lokalizacją / kontaktem,
+- nowa sekcja „Jak wygląda współpraca”,
+- bardziej profesjonalna sekcja kodów odpadów,
+- poprawiony blok Smolniki II,
+- bardziej kompaktowa sekcja kontaktowa.
 
-## Pliki
-- `index.html`
-- `styles.css`
-- `script.js`
-- `logo.png`
-- `hero.png`
+AKTUALIZACJA NA GITHUB:
+W repozytorium zastąp:
+- index.html
+- styles.css
+- script.js
 
-## Jak opublikować za darmo
-1. Załóż konto na GitHubie.
-2. Utwórz nowe publiczne repozytorium, np. `revitpoint-site`.
-3. Wgraj wszystkie pliki z tego folderu do repozytorium.
-4. Wejdź w **Settings → Pages**.
-5. W sekcji **Build and deployment** wybierz:
-   - **Source:** Deploy from a branch
-   - **Branch:** main / root
-6. Zapisz.
-7. Po chwili strona będzie dostępna pod adresem typu:
-   `https://twojanazwa.github.io/revitpoint-site/`
-
-## Co można dodać później
-- pełną listę kodów odpadów,
-- mapę Google,
-- galerię zdjęć,
-- dodatkowe zdjęcia lub sekcję FAQ,
-- własną domenę, np. revitpoint.pl.
+Pliki logo.png i hero.png mogą pozostać te same.
+Po zatwierdzeniu zmian GitHub Pages sam opublikuje nową wersję.
