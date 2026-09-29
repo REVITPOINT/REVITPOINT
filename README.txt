@@ -1,13 +1,8 @@
-REVIT POINT — JASNA ZIELEŃ
+REVIT POINT — MNIEJSZA PRZESŁONA PO LEWEJ
 
-Wgraj do repozytorium: index.html, styles.css, script.js.
-Zachowaj istniejące pliki obrazów: logo.png, hero.png, kruszywa.webp.
+Podmień index.html, styles.css i script.js.
+Zachowaj istniejące obrazy logo.png, hero.png i kruszywa.webp.
 
-Nowa kolorystyka: jasna szałwia, ciepła biel i zieleń.
-Rozjaśniono sekcję odpadów, kafelki, początek strony, lokalizację i stopkę.
-Odpady pozostają na pierwszym miejscu.
-Pakiet nie zawiera pliku CNAME.
-
-Usunięto określenia głównej działalności. Opisy obu obszarów są neutralne.
-
-Zdjęcie na początku strony: zmniejszona jasna przesłona, prawa część bez przesłony na komputerze.
+Zmniejszono jasną przesłonę po lewej stronie zdjęcia na początku strony.
+Nie zmieniono ostrości ani plików zdjęć.
+Zachowano jasną zieleń i wszystkie wcześniejsze poprawki opisów.
