@@ -109,7 +109,7 @@ h2{font-size:clamp(34px,4vw,56px);line-height:1.08;letter-spacing:-.035em;margin
 .mail-contact{display:block;color:var(--green);font-weight:700;margin-bottom:28px}
 
 .location-section{position:relative;min-height:610px;display:flex;align-items:center}
-.location-image{background-image:url("smolniki-teren.jpg");background-position:68% center}
+.location-image{filter:saturate(.86) contrast(.96) brightness(1.03)}
 .location-section:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(225,238,213,.65),rgba(225,238,213,.08))}
 .location-inner{position:relative;z-index:2;padding:80px 0}
 .location-panel{background:rgba(247,251,240,.97);color:var(--ink);max-width:620px;border-radius:18px;padding:42px;box-shadow:var(--shadow)}
@@ -202,3 +202,12 @@ a:focus-visible,button:focus-visible{outline:3px solid #6b954e;outline-offset:4p
 .site-panorama{margin-top:42px;margin-bottom:0}
 .site-panorama img{width:100%;height:auto;border-radius:18px}
 .site-panorama figcaption{font-size:12px;color:var(--muted);margin-top:10px}
+
+.site-photo-pair{margin-top:42px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.site-photo-pair .site-panorama{width:100%;margin:0}
+@media(max-width:700px){.site-photo-pair{grid-template-columns:1fr}}
+
+/* Spójna prezentacja fotografii bez zmiany plików źródłowych. */
+.hero-bg{filter:saturate(.86) contrast(.96) brightness(1.03)}
+.aggregates-card img{filter:saturate(.86) contrast(.96) brightness(1.02)}
+.site-panorama img{filter:brightness(1.13) contrast(1.09) saturate(1.12) sepia(.09);image-rendering:auto}

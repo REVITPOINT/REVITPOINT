@@ -1,14 +1,9 @@
-REVIT POINT — ZDJĘCIA SMOLNIKI II
+REVIT POINT — SPÓJNA KOLORYSTYKA ZDJĘĆ
 
-Wgraj wszystkie poniższe pliki do głównego folderu repozytorium:
-- index.html
-- styles.css
-- script.js
-- smolniki-wyrobisko.jpg
-- smolniki-teren.jpg
-
+Wgraj index.html, styles.css, script.js i oba pliki JPG z paczki.
 Zachowaj obecne logo.png, hero.png i kruszywa.webp.
-Zdjęcia dodano bez wyostrzania ani zmiany kolorów.
-Panorama w sekcji odpadów jest widoczna w całości, bez przesłony.
-Drugie ujęcie jest tłem części Smolniki II.
-Zachowano wszystkie wcześniejsze poprawki.
+
+Dopasowano jasność, kontrast i nasycenie zdjęć przez style strony.
+Nowe ujęcia są lekko ocieplone i rozjaśnione, starsze mają spokojniejsze kolory.
+Oryginalne pliki zdjęć pozostają bez zmian. Korekta nie zwiększa rozdzielczości.
+Pierwsze zdjęcie pozostaje na górze. Nowe zdjęcia występują po jednym razie.
