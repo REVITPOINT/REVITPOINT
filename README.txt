@@ -9,3 +9,5 @@ Odpady pozostają na pierwszym miejscu.
 Pakiet nie zawiera pliku CNAME.
 
 Usunięto określenia głównej działalności. Opisy obu obszarów są neutralne.
+
+Zdjęcie na początku strony: zmniejszona jasna przesłona, prawa część bez przesłony na komputerze.
