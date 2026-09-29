@@ -317,11 +317,6 @@ a{text-decoration:none;color:inherit}
   object-fit:cover;
   border-radius:var(--radius);
 }
-.aggregates-media figcaption{
-  margin-top:.45rem;
-  color:var(--muted);
-  font-size:.82rem;
-}
 
 /* PROCESS */
 .process-section{
