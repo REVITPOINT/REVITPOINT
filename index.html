@@ -3,354 +3,346 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REVIT POINT | Odzysk odpadów i kruszywa naturalne</title>
-  <meta name="description" content="REVIT POINT – rekultywacja wyrobiska SMOLNIKI II z wykorzystaniem odpadów w procesie odzysku R5 oraz wydobycie i sprzedaż kruszywa naturalnego." />
-  <meta name="theme-color" content="#2f7d32" />
+  <title>REVIT POINT | Przyjmowanie odpadów do rekultywacji</title>
+  <meta name="description" content="REVIT POINT – przyjmowanie odpadów do rekultywacji wyrobiska SMOLNIKI II w procesie odzysku R5. Dodatkowo wydobycie i sprzedaż kruszywa naturalnego." />
+  <meta name="theme-color" content="#24452f" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="brand">
-        <img src="logo.png" alt="REVIT POINT" class="brand-logo" />
-        <div class="brand-text">
-          <strong>REVIT POINT</strong>
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <img src="logo.png" alt="REVIT POINT" class="brand-logo">
+      <div>
+        <strong>REVIT POINT</strong>
+        <span>Smolniki II</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#o-nas">O firmie</a>
+      <a href="#odpady" class="nav-main-link">Przyjmowanie odpadów</a>
+      <a href="#kruszywa">Kruszywa</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-shade"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">GŁÓWNY OBSZAR DZIAŁALNOŚCI</p>
+        <h1>Przyjmowanie odpadów<br>do rekultywacji wyrobisk</h1>
+        <p class="hero-lead">
+          W Smolnikach II prowadzimy odzysk odpadów w procesie R5,
+          wykorzystując je do rekultywacji wyrobiska poeksploatacyjnego.
+          Każde zapytanie weryfikujemy indywidualnie.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#odpady">Sprawdź możliwość przyjęcia odpadu</a>
+          <a class="btn btn-ghost" href="#kontakt">Skontaktuj się</a>
         </div>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
-
-      <nav class="main-nav" id="mainNav">
-        <a href="#o-nas">O nas</a>
-        <a href="#odpady">Przyjmowanie odpadów</a>
-        <a href="#kruszywa">Kruszywa naturalne</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
-      </nav>
+        <div class="hero-secondary-note">
+          <p><strong>Działalność uzupełniająca:</strong> wydobycie i sprzedaż kruszywa naturalnego ze złoża SMOLNIKI II.</p>
+          <a href="#kruszywa">Zobacz kruszywa →</a>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-image">
-        <img src="hero.png" alt="Zakład Górniczy Smolniki II" />
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div><span>Proces odzysku</span><strong>R5</strong></div>
+      <div><span>Obsługa</span><strong>B2B</strong></div>
+      <div><span>Lokalizacja</span><strong>Smolniki II</strong></div>
+      <div><span>BDO</span><strong>000604352</strong></div>
+    </div>
+  </section>
+
+  <section class="section" id="o-nas">
+    <div class="container intro-grid">
+      <div>
+        <p class="section-label">O FIRMIE</p>
+        <h2>Odzysk odpadów jest podstawą naszej działalności</h2>
       </div>
-      <div class="hero-overlay"></div>
-
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Przyjmowanie odpadów<br />do rekultywacji wyrobisk</h1>
-          <p>
-            W Smolnikach II prowadzimy odzysk odpadów w ramach rekultywacji wyrobiska
-            poeksploatacyjnego. Każde zapytanie weryfikujemy pod kątem zakresu decyzji,
-            rodzaju odpadu i warunków dostawy. Prowadzimy również wydobycie i sprzedaż
-            kruszywa naturalnego ze złoża SMOLNIKI II.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#odpady" class="btn btn-primary">Przyjmowanie odpadów</a>
-            <a href="#kruszywa" class="btn btn-secondary">Kruszywa naturalne</a>
-          </div>
-        </div>
+      <div class="intro-copy">
+        <p>
+          REVIT POINT prowadzi działalność w Smolnikach II, koncentrując się
+          przede wszystkim na przyjmowaniu odpadów przeznaczonych do rekultywacji
+          wyrobiska poeksploatacyjnego.
+        </p>
+        <p>
+          Drugim, uzupełniającym obszarem działalności jest eksploatacja złoża
+          oraz sprzedaż kruszywa naturalnego pochodzącego z bieżącego wydobycia.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <section class="info-strip">
-      <div class="container info-grid">
-        <div class="info-item">
-          <span>BDO</span>
-          <strong>000604352</strong>
-        </div>
-        <div class="info-item">
-          <span>Obsługa</span>
-          <strong>B2B</strong>
-        </div>
-        <div class="info-item">
-          <span>Lokalizacja</span>
-          <strong>Smolniki II</strong>
-        </div>
-        <div class="info-item">
-          <span>Kontakt</span>
-          <strong>+48 604 401 277</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="o-nas">
-      <div class="container">
-        <div class="about-intro">
-          <p class="section-label">O NAS</p>
-          <h2>Czym zajmuje się REVIT POINT?</h2>
-          <p>Nasza działalność w Smolnikach II obejmuje dwa obszary: przyjmowanie odpadów do rekultywacji wyrobiska oraz wydobycie i sprzedaż kruszywa naturalnego.</p>
-        </div>
-        <div class="about-areas">
-          <article class="about-area">
-            <span class="about-number">01 / ODZYSK ODPADÓW</span>
-            <h3>Przyjmowanie odpadów do rekultywacji wyrobiska</h3>
-            <p>W procesie odzysku R5 wykorzystujemy odpady dopuszczone w posiadanej decyzji do wypełniania wyrobiska poeksploatacyjnego. Współpracujemy też z uprawnionymi firmami w innych regionach Polski.</p>
-            <a href="#odpady">Dowiedz się więcej <span aria-hidden="true">→</span></a>
-          </article>
-          <article class="about-area">
-            <span class="about-number">02 / KRUSZYWA NATURALNE</span>
-            <h3>Wydobycie i sprzedaż kruszywa</h3>
-            <p>Prowadzimy eksploatację złoża kruszywa naturalnego SMOLNIKI II. Oferujemy materiał pochodzący z bieżącego wydobycia, a dostępność i warunki zakupu potwierdzamy indywidualnie.</p>
-            <a href="#kruszywa">Dowiedz się więcej <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="odpady">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">PRZYJMOWANIE ODPADÓW</p>
-            <h2>Rekultywacja wyrobiska z wykorzystaniem odpadów</h2>
-          </div>
-          <p>
-            Weryfikujemy możliwość przyjęcia odpadów do wyrobiska oraz pomagamy znaleźć
-            rozwiązanie we współpracy z uprawnionymi podmiotami w innych regionach Polski.
-          </p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="feature-card">
-            <div class="feature-icon">✓</div>
-            <h3>Rekultywacja z wykorzystaniem odpadów</h3>
-            <p>
-              Wypełniamy wyrobisko poeksploatacyjne odpadami dopuszczonymi
-              do odzysku w procesie R5 na podstawie posiadanej decyzji.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">✓</div>
-            <h3>Weryfikacja odpadów</h3>
-            <p>
-              Sprawdzamy kod, rodzaj i ilość odpadu oraz warunki jego przyjęcia
-              w odniesieniu do zakresu posiadanego zezwolenia.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">✓</div>
-            <h3>Organizacja współpracy</h3>
-            <p>
-              Po potwierdzeniu możliwości przyjęcia ustalamy termin dostawy
-              i szczegóły organizacyjne z przedsiębiorcą.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process-section">
-      <div class="container process-wrap">
-        <div class="process-title">
-          <p class="section-label">JAK TO DZIAŁA</p>
-          <h2>Jak wygląda współpraca</h2>
-        </div>
-
-        <div class="process-list">
-          <div class="process-item">
-            <h3>Wyślij podstawowe informacje</h3>
-            <p>Kod odpadu, orientacyjna ilość, miejsce pochodzenia i preferowany termin.</p>
-          </div>
-
-          <div class="process-item">
-            <h3>Weryfikujemy możliwość przyjęcia</h3>
-            <p>Sprawdzamy zgodność odpadu z decyzją lub dostępność rozwiązania u współpracujących firm.</p>
-          </div>
-
-          <div class="process-item">
-            <h3>Ustalamy warunki dostawy</h3>
-            <p>Po potwierdzeniu możliwości przyjęcia ustalamy termin i kwestie organizacyjne.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="kody-odpadow">
-      <div class="container waste-grid">
-        <div class="waste-main">
-          <p class="section-label">KODY ODPADÓW</p>
-          <h2>Zapytaj o konkretny odpad</h2>
-          <p>
-            Prześlij nam kod i rodzaj odpadu, jego ilość oraz miejsce pochodzenia.
-            Możesz zapytać o każdy kod, niezależnie od lokalizacji. Sprawdzimy, czy odpad
-            mieści się w zakresie naszej decyzji, a w pozostałych przypadkach poszukamy
-            możliwości współpracy z uprawnionymi firmami w innych regionach Polski.
-          </p>
-
-          <div class="waste-tags">
-            <span>Kod odpadu</span>
-            <span>Ilość</span>
-            <span>Miejsce pochodzenia</span>
-            <span>Termin</span>
-          </div>
-        </div>
-
-        <aside class="waste-box">
-          <p class="mini-title">SZYBKA WERYFIKACJA</p>
-          <h3>Skontaktuj się z nami</h3>
-          <a href="tel:+48604401277" class="contact-line phone-line">+48 604 401 277</a>
-          <a href="mailto:biuro@revitpoint.pl" class="contact-line">biuro@revitpoint.pl</a>
-          <a href="#kontakt" class="btn btn-light">Przejdź do kontaktu</a>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section-photo" id="smolniki">
-      <div class="container location-wrap">
-        <div class="location-card">
-          <p class="section-label section-label-light">ODZYSK ODPADÓW</p>
-          <h2>Odzysk R5 w Smolnikach II</h2>
-          <p>
-            Rekultywacja wyrobiska po eksploatacji złoża kruszywa naturalnego
-            SMOLNIKI II odbywa się z wykorzystaniem odpadów wskazanych w decyzji.
-            Prowadzimy ich odzysk poza instalacjami i urządzeniami w procesie R5,
-            polegającym na wypełnianiu wyrobiska poeksploatacyjnego.
-          </p>
-
-          <div class="location-pills">
-            <span>Smolniki</span>
-            <span>gmina Szubin</span>
-            <span>kujawsko-pomorskie</span>
-          </div>
-
-          <p class="location-note">
-            Dokładną lokalizację i wskazówki dotyczące dojazdu przekazujemy po kontakcie.
-            Możliwość przyjęcia odpadu potwierdzamy po weryfikacji zapytania.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section aggregates-section" id="kruszywa">
-      <div class="container aggregates-grid">
-        <div class="aggregates-copy">
-          <div>
-            <p class="section-label">KRUSZYWA NATURALNE</p>
-            <h2>Wydobycie i sprzedaż kruszywa ze złoża SMOLNIKI II</h2>
-          </div>
-          <div class="aggregates-details">
-            <p>
-              Prowadzimy eksploatację złoża kruszywa naturalnego SMOLNIKI II w gminie Szubin.
-              Oferujemy kruszywo pochodzące z bieżącego wydobycia. O dostępność materiału,
-              jego rodzaj oraz warunki zakupu i odbioru zapytaj nas telefonicznie lub mailowo.
-            </p>
-            <a href="#kontakt" class="btn btn-primary">Zapytaj o kruszywo</a>
-          </div>
-        </div>
-        <figure class="aggregates-media">
-          <img src="kruszywa.webp" alt="Wizualizacja ładowarki i koparki na tle wyrobiska w Smolnikach" loading="lazy" />
-        </figure>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="kontakt">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="section-label">KONTAKT</p>
-          <h2>Porozmawiajmy o odpadach lub kruszywie</h2>
-          <p class="lead">
-            Najszybciej skontaktujesz się z nami telefonicznie lub mailowo.
-            Możesz też skorzystać z prostego formularza. Jeśli pytasz o kruszywo, opisz swoje zapotrzebowanie
-            w polu wiadomości.
-          </p>
-
-          <div class="contact-cards">
-            <div class="contact-card company-card">
-              <span>Dane firmy i adres siedziby</span>
-              <strong>REVIT POINT Niedzielska Kaźmierczak Pacholski sp.j.</strong>
-              <address>ul. Henryka Sienkiewicza 22<br />60-818 Poznań</address>
-            </div>
-            <div class="contact-card">
-              <span>Telefon</span>
-              <a href="tel:+48604401277" class="phone-line">+48 604 401 277</a>
-            </div>
-            <div class="contact-card">
-              <span>E-mail</span>
-              <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
-            </div>
-            <div class="contact-card">
-              <span>NIP</span>
-              <strong>7812040275</strong>
-            </div>
-            <div class="contact-card">
-              <span>BDO</span>
-              <strong>000604352</strong>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-card">
-          <form id="quickForm">
-            <div class="form-row">
-              <label for="company">Firma</label>
-              <input id="company" type="text" placeholder="Nazwa firmy" />
-            </div>
-
-            <div class="form-row">
-              <label for="name">Imię i nazwisko</label>
-              <input id="name" type="text" placeholder="Twoje imię i nazwisko" />
-            </div>
-
-            <div class="form-row split-row">
-              <div>
-                <label for="phone">Telefon</label>
-                <input id="phone" type="text" placeholder="+48 ..." />
-              </div>
-              <div>
-                <label for="email">E-mail</label>
-                <input id="email" type="email" placeholder="adres e-mail" />
-              </div>
-            </div>
-
-            <div class="form-row split-row">
-              <div>
-                <label for="waste">Kod odpadu</label>
-                <input id="waste" type="text" placeholder="np. 17 05 04" />
-              </div>
-              <div>
-                <label for="amount">Ilość</label>
-                <input id="amount" type="text" placeholder="np. 20 Mg" />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <label for="message">Wiadomość</label>
-              <textarea id="message" rows="5" placeholder="Opisz odpad i miejsce pochodzenia albo zapotrzebowanie na kruszywo..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary form-button">Przygotuj wiadomość e-mail</button>
-            <p class="form-note">Po kliknięciu otworzy się gotowa wiadomość w Twoim programie pocztowym.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="logo.png" alt="REVIT POINT" class="footer-logo" />
+    <div class="container activity-layout">
+      <article class="activity activity-primary">
         <div>
-          <strong>REVIT POINT Niedzielska Kaźmierczak Pacholski sp.j.</strong>
-          <span>ul. Henryka Sienkiewicza 22, 60-818 Poznań</span>
+          <p class="activity-kicker">GŁÓWNA DZIAŁALNOŚĆ</p>
+          <h3>Przyjmowanie odpadów do rekultywacji</h3>
+          <p>
+            Weryfikujemy kod, rodzaj, ilość i pochodzenie odpadu oraz możliwość
+            jego przyjęcia zgodnie z zakresem posiadanej decyzji.
+          </p>
+          <a href="#odpady">Przejdź do informacji o odpadach →</a>
+        </div>
+      </article>
+
+      <article class="activity activity-secondary">
+        <div>
+          <p class="activity-kicker">DZIAŁALNOŚĆ UZUPEŁNIAJĄCA</p>
+          <h3>Kruszywa naturalne</h3>
+          <p>
+            Prowadzimy wydobycie i sprzedaż kruszywa naturalnego ze złoża
+            SMOLNIKI II.
+          </p>
+          <a href="#kruszywa">Zobacz ofertę kruszyw →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section waste-section" id="odpady">
+    <div class="container section-heading">
+      <div>
+        <p class="section-label section-label-light">PRZYJMOWANIE ODPADÓW</p>
+        <h2>Rekultywacja wyrobiska<br>z wykorzystaniem odpadów</h2>
+      </div>
+      <p class="section-description light">
+        Przyjmujemy odpady, które mogą zostać wykorzystane do rekultywacji
+        zgodnie z posiadaną decyzją. Przed każdą dostawą sprawdzamy możliwość
+        ich przyjęcia oraz warunki współpracy.
+      </p>
+    </div>
+
+    <div class="container feature-row">
+      <article class="dark-card">
+        <h3>Weryfikacja odpadu</h3>
+        <p>Sprawdzamy kod, rodzaj, ilość oraz miejsce pochodzenia odpadu.</p>
+      </article>
+      <article class="dark-card">
+        <h3>Zgodność z decyzją</h3>
+        <p>Potwierdzamy, czy dany odpad mieści się w zakresie dopuszczonym do odzysku R5.</p>
+      </article>
+      <article class="dark-card">
+        <span>03</span>
+        <h3>Ustalenie dostawy</h3>
+        <p>Po akceptacji ustalamy termin, ilość oraz szczegóły organizacyjne.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section process-section">
+    <div class="container process-grid">
+      <div class="process-title">
+        <p class="section-label">JAK WYGLĄDA WSPÓŁPRACA</p>
+        <h2>Prosty proces od zapytania do dostawy</h2>
+      </div>
+
+      <div class="process-steps">
+        <div class="step">
+          <div>
+            <h3>Prześlij informacje</h3>
+            <p>Podaj kod odpadu, orientacyjną ilość, miejsce pochodzenia i preferowany termin.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Weryfikujemy możliwość przyjęcia</h3>
+            <p>Sprawdzamy zgodność odpadu z zakresem decyzji i warunkami przyjęcia.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Ustalamy warunki</h3>
+            <p>Po potwierdzeniu możliwości przyjęcia ustalamy termin i organizację dostawy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section verify-section">
+    <div class="container verify-grid">
+      <div>
+        <p class="section-label">SZYBKA WERYFIKACJA</p>
+        <h2>Masz kod odpadu?<br>Sprawdzimy możliwość przyjęcia.</h2>
+        <p>
+          Prześlij nam podstawowe dane. Jeśli dany odpad nie mieści się
+          w zakresie naszej decyzji, możemy sprawdzić możliwość współpracy
+          z uprawnionymi podmiotami w innych regionach Polski.
+        </p>
+        <div class="tags">
+          <span>Kod odpadu</span><span>Ilość</span><span>Miejsce pochodzenia</span><span>Termin</span>
+        </div>
+      </div>
+      <aside class="verify-card">
+        <p>NAJSZYBSZY KONTAKT</p>
+        <a class="big-contact" href="tel:+48604401277">+48 604 401 277</a>
+        <a class="mail-contact" href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+        <a class="btn btn-primary full" href="#kontakt">Wyślij zapytanie</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="location-section">
+    <div class="location-image"></div>
+    <div class="container location-inner">
+      <div class="location-panel">
+        <p class="section-label section-label-light">SMOLNIKI II</p>
+        <h2>Odzysk R5 w miejscu rekultywacji</h2>
+        <p>
+          Rekultywacja wyrobiska po eksploatacji złoża kruszywa naturalnego
+          SMOLNIKI II odbywa się z wykorzystaniem odpadów wskazanych w decyzji.
+          Odzysk prowadzony jest poza instalacjami i urządzeniami w procesie R5.
+        </p>
+        <div class="location-pills">
+          <span>Smolniki</span><span>gmina Szubin</span><span>kujawsko-pomorskie</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section aggregates-section" id="kruszywa">
+    <div class="container aggregates-head">
+      <div>
+        <p class="section-label">DZIAŁALNOŚĆ UZUPEŁNIAJĄCA</p>
+        <h2>Kruszywa naturalne<br>ze złoża SMOLNIKI II</h2>
+      </div>
+      <p>
+        Uzupełnieniem działalności REVIT POINT jest wydobycie i sprzedaż
+        kruszywa naturalnego pochodzącego z bieżącej eksploatacji złoża.
+      </p>
+    </div>
+
+    <div class="container aggregates-card">
+      <figure>
+        <img src="kruszywa.webp" alt="Wyrobisko i maszyny w Smolnikach II" loading="lazy">
+      </figure>
+      <div class="aggregates-content">
+        <p class="small-label">KRUSZYWA NATURALNE</p>
+        <h3>Zapytaj o aktualną dostępność materiału</h3>
+        <p>
+          Rodzaj dostępnego materiału, warunki zakupu i odbioru potwierdzamy
+          indywidualnie. Skontaktuj się z nami, aby otrzymać bieżące informacje.
+        </p>
+        <a class="btn btn-outline" href="#kontakt">Zapytaj o kruszywo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="kontakt">
+    <div class="container contact-grid">
+      <div>
+        <p class="section-label">KONTAKT</p>
+        <h2>Wyślij zapytanie</h2>
+        <p class="contact-lead">
+          W sprawie przyjęcia odpadów podaj przede wszystkim kod, ilość,
+          miejsce pochodzenia i termin. W sprawie kruszywa opisz zapotrzebowanie.
+        </p>
+
+        <div class="contact-details">
+          <div>
+            <span>Telefon</span>
+            <a href="tel:+48604401277">+48 604 401 277</a>
+          </div>
+          <div>
+            <span>E-mail</span>
+            <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+          </div>
+          <div>
+            <span>Siedziba</span>
+            <strong>ul. Henryka Sienkiewicza 22<br>60-818 Poznań</strong>
+          </div>
+          <div>
+            <span>NIP / BDO</span>
+            <strong>7812040275 / 000604352</strong>
+          </div>
         </div>
       </div>
 
-      <div class="footer-meta">
-        <span>NIP 7812040275</span>
-        <span>BDO 000604352</span>
-        <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+      <div class="form-card">
+        <div class="form-switch">
+          <button type="button" class="switch-btn active" data-type="odpady">Odpady</button>
+          <button type="button" class="switch-btn" data-type="kruszywa">Kruszywa</button>
+        </div>
+
+        <form id="quickForm">
+          <input type="hidden" id="inquiryType" value="odpady">
+
+          <div class="form-row">
+            <label for="company">Firma</label>
+            <input id="company" type="text" placeholder="Nazwa firmy">
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="name">Imię i nazwisko</label>
+              <input id="name" type="text" placeholder="Imię i nazwisko">
+            </div>
+            <div>
+              <label for="phone">Telefon</label>
+              <input id="phone" type="text" placeholder="+48 ...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="adres e-mail">
+          </div>
+
+          <div class="form-row two waste-fields">
+            <div>
+              <label for="waste">Kod odpadu</label>
+              <input id="waste" type="text" placeholder="np. 17 05 04">
+            </div>
+            <div>
+              <label for="amount">Ilość</label>
+              <input id="amount" type="text" placeholder="np. 20 Mg">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Wiadomość</label>
+            <textarea id="message" rows="5" placeholder="Miejsce pochodzenia, termin i dodatkowe informacje..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary full">Przygotuj wiadomość e-mail</button>
+          <p class="form-note">Po kliknięciu otworzy się gotowa wiadomość w programie pocztowym.</p>
+        </form>
       </div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script src="script.js"></script>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="REVIT POINT">
+      <div>
+        <strong>REVIT POINT Niedzielska Kaźmierczak Pacholski sp.j.</strong>
+        <span>ul. Henryka Sienkiewicza 22, 60-818 Poznań</span>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>NIP 7812040275</span>
+      <span>BDO 000604352</span>
+      <a href="mailto:biuro@revitpoint.pl">biuro@revitpoint.pl</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
