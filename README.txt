@@ -1,8 +1,14 @@
-REVIT POINT — MNIEJSZA PRZESŁONA PO LEWEJ
+REVIT POINT — ZDJĘCIA SMOLNIKI II
 
-Podmień index.html, styles.css i script.js.
-Zachowaj istniejące obrazy logo.png, hero.png i kruszywa.webp.
+Wgraj wszystkie poniższe pliki do głównego folderu repozytorium:
+- index.html
+- styles.css
+- script.js
+- smolniki-wyrobisko.jpg
+- smolniki-teren.jpg
 
-Zmniejszono jasną przesłonę po lewej stronie zdjęcia na początku strony.
-Nie zmieniono ostrości ani plików zdjęć.
-Zachowano jasną zieleń i wszystkie wcześniejsze poprawki opisów.
+Zachowaj obecne logo.png, hero.png i kruszywa.webp.
+Zdjęcia dodano bez wyostrzania ani zmiany kolorów.
+Panorama w sekcji odpadów jest widoczna w całości, bez przesłony.
+Drugie ujęcie jest tłem części Smolniki II.
+Zachowano wszystkie wcześniejsze poprawki.

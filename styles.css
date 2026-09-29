@@ -109,7 +109,7 @@ h2{font-size:clamp(34px,4vw,56px);line-height:1.08;letter-spacing:-.035em;margin
 .mail-contact{display:block;color:var(--green);font-weight:700;margin-bottom:28px}
 
 .location-section{position:relative;min-height:610px;display:flex;align-items:center}
-.location-image{filter:saturate(.85)}
+.location-image{background-image:url("smolniki-teren.jpg");background-position:68% center}
 .location-section:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(225,238,213,.65),rgba(225,238,213,.08))}
 .location-inner{position:relative;z-index:2;padding:80px 0}
 .location-panel{background:rgba(247,251,240,.97);color:var(--ink);max-width:620px;border-radius:18px;padding:42px;box-shadow:var(--shadow)}
@@ -198,3 +198,7 @@ textarea{resize:vertical}
 /* Czytelne etykiety i widoczna nawigacja klawiaturą. */
 .trust-grid span,.contact-details span,.verify-card>p,.form-note{color:#586b5c}
 a:focus-visible,button:focus-visible{outline:3px solid #6b954e;outline-offset:4px}
+
+.site-panorama{margin-top:42px;margin-bottom:0}
+.site-panorama img{width:100%;height:auto;border-radius:18px}
+.site-panorama figcaption{font-size:12px;color:var(--muted);margin-top:10px}
