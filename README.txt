@@ -1,16 +1,9 @@
-REVIT POINT — PLIKI DO PODMIANY
+REVIT POINT — JASNA ZIELEŃ
 
-Wgraj do repozytorium pliki:
-- index.html
-- styles.css
-- script.js
+Wgraj do repozytorium: index.html, styles.css, script.js.
+Zachowaj istniejące pliki obrazów: logo.png, hero.png, kruszywa.webp.
 
-Zachowaj istniejące zdjęcia i logo: logo.png, hero.png, kruszywa.webp.
-Pakiet zawiera pliki do podmiany, bez tych obrazów.
-
-Usunięto określenia „uzupełniająca” oraz podobne sformułowania.
-Sekcje kruszyw opisano jako „Wydobycie i sprzedaż”.
-Odpady pozostają na pierwszym miejscu. Nie przywrócono numerów 01 i 02.
+Nowa kolorystyka: jasna szałwia, ciepła biel i zieleń.
+Rozjaśniono sekcję odpadów, kafelki, początek strony, lokalizację i stopkę.
+Odpady pozostają na pierwszym miejscu.
 Pakiet nie zawiera pliku CNAME.
-
-Po publikacji odśwież stronę: Ctrl + F5.
